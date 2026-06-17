@@ -1,0 +1,138 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-brand: var(--accent2);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans:
+    system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/*
+ * 3D Printing Pricing Calculator — dark theme.
+ * Source palette (hex) mapped to semantic tokens.
+ *   --bg #0f1117 --surface #1a1d27 --surface2 #22263a
+ *   --accent #6c63ff --accent2 #ff6584 --green #43e97b
+ *   --yellow #f7c948 --text #e8eaf0 --muted #8890a4 --border #2e3248
+ */
+:root {
+  --radius: 0.75rem;
+
+  --background: #0f1117;
+  --foreground: #e8eaf0;
+  --card: #1a1d27;
+  --card-foreground: #e8eaf0;
+  --popover: #1a1d27;
+  --popover-foreground: #e8eaf0;
+  --primary: #6c63ff;
+  --primary-foreground: #ffffff;
+  --secondary: #22263a;
+  --secondary-foreground: #e8eaf0;
+  --muted: #22263a;
+  --muted-foreground: #8890a4;
+  --accent: #22263a;
+  --accent-foreground: #e8eaf0;
+  --accent2: #ff6584;
+  --destructive: #ff6584;
+  --destructive-foreground: #ffffff;
+  --success: #43e97b;
+  --success-foreground: #07120b;
+  --warning: #f7c948;
+  --warning-foreground: #1a1500;
+  --border: #2e3248;
+  --input: #22263a;
+  --ring: #6c63ff;
+
+  --chart-1: #6c63ff;
+  --chart-2: #43e97b;
+  --chart-3: #f7c948;
+  --chart-4: #ff6584;
+  --chart-5: #8890a4;
+
+  --sidebar: #1a1d27;
+  --sidebar-foreground: #e8eaf0;
+  --sidebar-primary: #6c63ff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #22263a;
+  --sidebar-accent-foreground: #e8eaf0;
+  --sidebar-border: #2e3248;
+  --sidebar-ring: #6c63ff;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(135deg, var(--primary), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-brand {
+  background-image: linear-gradient(135deg, var(--primary), var(--accent2));
+}
+
+@utility shadow-soft {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}

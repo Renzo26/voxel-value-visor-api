@@ -1,6 +1,18 @@
+# Python (backend)
 .venv/
 __pycache__/
 *.pyc
-.env
-uploads/
 .pytest_cache/
+uploads/
+
+# Node (frontend)
+node_modules/
+.output/
+dist/
+.tanstack/
+.vite/
+
+# Segredos / ambiente
+.env
+.env.*
+!.env.example
